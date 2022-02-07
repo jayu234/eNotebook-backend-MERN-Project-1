@@ -5,8 +5,11 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const fetchuser = require('../middleware/fetchuser');
+import dotenv from 'dotenv';
 
-const JWT_SWCRET = "ReaCT-pROjecT_3+iNotEBoOk";
+dotenv.config();
+
+const JWT_SWCRET = process.env.JWT_SECRET;
 
 /*
     --> To create a Basic route <--

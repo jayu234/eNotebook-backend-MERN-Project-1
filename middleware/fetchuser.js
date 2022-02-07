@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
-const JWT_SWCRET = "ReaCT-pROjecT_3+iNotEBoOk";
+import dotenv from 'dotenv';
 
+dotenv.config();
+const JWT_SWCRET = process.env.JWT_SWCRET;
 const fetchuser = (req, res, next)=>{
 
     const token = req.header('auth-token');
