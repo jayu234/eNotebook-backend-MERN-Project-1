@@ -1,7 +1,7 @@
 const connectToMongo = require('./db');
 const express = require('express');
 const cors = require('cors')
-
+require('dotenv').config({path: "config.env"});
 connectToMongo();
 const app = express()
 // const port = 3000 :: We cann't use it bcz our React App will be using this port.
