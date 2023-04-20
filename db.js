@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-import dotenv from 'dotenv';
+
+require('dotenv').config()
 const mongoURI = process.env.MONGOURI;
 
-dotenv.config();
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI, ()=>{
         console.log('Connected to Mongo succesfully');
